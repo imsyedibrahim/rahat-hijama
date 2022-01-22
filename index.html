@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Made by Syed</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./nav-bar.css">
+    <script src="./nav-bar.js"></script>
+</head>
+
+<header style="background: #140019;">
+    <nav class="navigation">
+
+        <!-- Logo -->
+        <div class="logo">
+            <h1>LOGO</h1>
+        </div>
+        
+        <!-- Navigation -->
+        <ul class="menu-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#portfolio">Project</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="humbarger">
+            <div class="bar"></div>
+            <div class="bar2 bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+<!-- ==== Intro Section Start ==== -->
+    <div class="intro-section" id="home">
+        <div class="bg-img"></div>
+        <div class="intro-content">
+            <h1>Web Developer</h1>
+            <h6>from Kenya</h6>
+            <p class="tagline">
+                <span class="change-container">
+                    <span class="changing">“If there is something excellent to be used as a remedy, then it is Hijama Cupping”.Reported by Abu Huraira.[Sunan Ibn Maajah]</span>
+                    <span class="changing">how you want it</span>
+                    <span class="changing">when you want it</span>
+                </span>
+            </p>
+            <div class="header-btn animated bounceIn">
+                <a href="#contact"><span>Get A Quote</span></a>
+            </div>
+            <!-- social media -->
+        </div>
+    </div>	
+</header>
+ <body>
+    <div class="container">
+        <div class="product">
+            
+            <img src="./images/Lumbar_spondylosis2.JPG" id="img1">
+            <img src="./images/frozen shoulder.jpeg" id="img2">
+
+            <div class="product-inner" id="productbox"> 
+                <div class="product-front"> 
+                    <div class="product-top">
+                        <h1>Rahat Hijama</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <h1>Dry Cupping</h1>
+                        <h2>Hijama Treats</h2>
+                        <button type="button">Contact for Appointment</button>
+                        <div class="treat-select">
+                            <div class="select-item">
+                                <img src="./images/arrows+back+chevron+direction+left+icon-1320085937350640908_0.svg" >
+                            </div>
+                            <div class="select-item">
+                                <img src="./images/arrows+chevron+direction+forward+next+right+icon-1320085938847587870_0.svg" onclick="flipright()">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-back">
+                    <div class="product-top product-top2">
+                        <h1>Rahat Hijama</h1>
+                    </div>
+                    <div class="product-bottom">
+                        <h1>Dry Cupping</h1>
+                        <h2>Hijama Treats</h2>
+                        <button type="button">Contact for Appointment</button>
+                        <div class="treat-select">
+                            <div class="select-item">
+                                <img src="./images/arrows+back+chevron+direction+left+icon-1320085937350640908_0.svg" onclick="flipleft()">
+                            </div>
+                            <div class="select-item">
+                                <img src="./images/arrows+chevron+direction+forward+next+right+icon-1320085938847587870_0.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-left"></div>
+                <div class="product-right"></div>  
+            </div>      
+        </div>
+    </div>
+
+    <!--
+    
+        <span><i>Lumbar Spondylitis</i></span>
+        
+    </div>
+    <div class="select-item">
+        <span><i>Frozen Shoulder</i></span>
+        
+    </div>
+    <div class="select-item">
+        <span><i>Acne</i></span>
+        
+         -->
+    <script>
+        var productBox = document.getElementById("productbox");
+        var image1 = document.getElementById("img1");
+        var image2 = document.getElementById("img2");
+            
+            function flipright(){
+                productBox.style.transform="rotateY(180deg)";
+                image2.style.left = "120px";
+                image1.style.left = "650px";
+                image1.style.transform = "rotate(-30deg)";
+                image2.style.transform = "rotate(0deg)";
+            }
+            function flipleft(){
+                productBox.style.transform="rotateY(0deg)";
+                image1.style.left = "120px";
+                image2.style.left = "-650px";
+                image1.style.transform = "rotate(0deg)";
+                image2.style.transform = "rotate(-30deg)";
+            }
+
+    
+    </script>
+</body>
+</html>
