@@ -12,5 +12,8 @@ $(document).ready(function(){
         }
       });
 });
+$(document).readyfunction() 
+  $('.mbr-links').click();
 
 });
+

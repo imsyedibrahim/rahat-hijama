@@ -8,22 +8,23 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./nav-bar.css">
     <script src="./nav-bar.js"></script>
+ 
+
 </head>
 
 <header style="background: #140019;">
-    <nav class="navigation">
+    <nav class="navigation" id="navigation-id">
 
         <!-- Logo -->
         <div class="logo">
-            <h1>LOGO</h1>
+           <img src="./images/Rahat Hijma-logo.png" alt="Rahat Hijama & puncture clinic">
         </div>
         
         <!-- Navigation -->
         <ul class="menu-list">
             <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#portfolio">Project</a></li>
+            <li><a href="./about.html"class="mbr-links">About Us</a></li>
+            <li><a href="./treat-sec.html">Treats</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
 
@@ -35,31 +36,40 @@
     </nav>
 
 <!-- ==== Intro Section Start ==== -->
-    <div class="intro-section" id="home">
+    <div class="intro-section" id="home" style="overflow-x: hidden;">
         <div class="bg-img"></div>
         <div class="intro-content">
-            <h1>Web Developer</h1>
-            <h6>from Kenya</h6>
+            <h1> Healing through Hijama Cupping Therapy</h1>
+            <p>'Hijama' is a Arabic word derived from 'Hajm' which means 'sucking'. Cupping (hijama) is the process of applying cups various points on the body by removing the air inside the cups to form a vacuum. </p>
+            <span>Treating diseases by cupping known as hijama is a very ancient technique which was used by various arab countries in the middle east.</span>
+            <span>Our Propeht Muhammed sallā-llāhu alayhi wa sallam, confirmed the benefits of hijama, applied it and encouraged his companions to use it to heal themselves. “Today Hijama is widespread in the East and West—in China, India and in Europe and now it has spread to America in the last few years. Cupping reached Europe through Muslims who lived in Andalusia in Spain at a time when their knowledge was at the forefront of medicine.”</span>
+            <span>Hijama cupping therapy is part of prophetic medicine (Sunnah Medicine), and is capable of treating a wide range of diseases and physical issues. </span>
+            <span>This is one of the narrations regarding Hijama:
+                “If there is something excellent to be used as a remedy, then it is Hijama Cupping”. [Sunan- ibn-Majah 3476] </span>
             <p class="tagline">
                 <span class="change-container">
-                    <span class="changing">“If there is something excellent to be used as a remedy, then it is Hijama Cupping”.Reported by Abu Huraira.[Sunan Ibn Maajah]</span>
-                    <span class="changing">how you want it</span>
-                    <span class="changing">when you want it</span>
+                    <span class="changing">Indeed the best of remedies you have is.......</span>
+                    <span class="changing">cupping (hijama)… - Saheeh al-Bukhaaree (5371)</span>
+                    <!-- <span class="changing">“Oh Muhammad, order your Ummah (nation) with cupping (hijama).” </span>
+                    <span class="changing">Saheeh Sunan Tirmidhee (3479)</span> -->
                 </span>
             </p>
             <div class="header-btn animated bounceIn">
-                <a href="#contact"><span>Get A Quote</span></a>
+                <a href="#contact"><span>Book Appointment</span></a>
             </div>
             <!-- social media -->
         </div>
     </div>	
+
+    <!-- <div id="about" style="font-size: 5rem;text-align: center;color: white;"> something</div> -->
 </header>
- <body>
+
+ <body style="overflow-x: hidden;">
     <div class="container">
         <div class="product">
             
-            <img src="./images/Lumbar_spondylosis2.JPG" id="img1">
-            <img src="./images/frozen shoulder.jpeg" id="img2">
+            <img src="./images/img_front.jpg" id="img1">
+            <img src="./images/img_back.jpg" id="img2">
 
             <div class="product-inner" id="productbox"> 
                 <div class="product-front"> 
@@ -103,20 +113,9 @@
             </div>      
         </div>
     </div>
-
-    <!--
     
-        <span><i>Lumbar Spondylitis</i></span>
-        
-    </div>
-    <div class="select-item">
-        <span><i>Frozen Shoulder</i></span>
-        
-    </div>
-    <div class="select-item">
-        <span><i>Acne</i></span>
-        
-         -->
+    
+
     <script>
         var productBox = document.getElementById("productbox");
         var image1 = document.getElementById("img1");
@@ -124,20 +123,33 @@
             
             function flipright(){
                 productBox.style.transform="rotateY(180deg)";
-                image2.style.left = "120px";
+                image2.style.left = "40px";
                 image1.style.left = "650px";
                 image1.style.transform = "rotate(-30deg)";
                 image2.style.transform = "rotate(0deg)";
             }
             function flipleft(){
                 productBox.style.transform="rotateY(0deg)";
-                image1.style.left = "120px";
+                image1.style.left = "40px";
                 image2.style.left = "-650px";
                 image1.style.transform = "rotate(0deg)";
                 image2.style.transform = "rotate(-30deg)";
             }
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navigation-id").style.top = "0";
+  } else {
+    document.getElementById("navigation-id").style.top = "-80px";
+  }
+  prevScrollpos = currentScrollPos;
+}
     
     </script>
+
+
+
 </body>
 </html>
