@@ -11,14 +11,15 @@ body{
 }
 .container{
     width: 590px;
-    height: 160vh;
+    height: 150vh;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
+    margin-bottom: 1%;
     /* background-color: white; */
     overflow: hidden;
-    padding-top: 250px;
+   
     border-radius: 3px;
     
 }
@@ -27,7 +28,7 @@ body{
     height: 550px;
   /* background-color: red  */
   perspective: 1000px;
- 
+
 }
 .product-inner{
     position: relative;
